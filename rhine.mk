@@ -76,7 +76,8 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8974 \
     audio.r_submix.default \
     audio.usb.default \
-    audio_policy.msm8974
+    audio_policy.msm8974 \
+    libdirac
 
 PRODUCT_PACKAGES += \
     libaudio-resampler \
@@ -87,7 +88,12 @@ PRODUCT_PACKAGES += \
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf
+    $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+    $(LOCAL_PATH)/audio/libdirac.so:system/lib/soundfx/libdirac.so
+
+# DiracHD audio effects
+PRODUCT_PROPERTY_OVERRIDES += \
+    dsp.dirac.enable=true
 
 # Camera
 PRODUCT_PACKAGES += \
