@@ -129,3 +129,6 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/sony/rhine-common
+
+# Include an expanded selection of fonts
+EXTENDED_FONT_FOOTPRINT := true
