@@ -37,7 +37,6 @@ TARGET_CPU_VARIANT := krait
 COMMON_GLOBAL_CFLAGS += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64
 
 # Bionic
-BOARD_USES_LEGACY_MMAP := true
 TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
 
 # Kernel information
@@ -129,6 +128,3 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/sony/rhine-common
-
-# Include an expanded selection of fonts
-EXTENDED_FONT_FOOTPRINT := true
