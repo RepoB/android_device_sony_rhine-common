@@ -86,7 +86,8 @@ PRODUCT_PACKAGES += \
 # Audio configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
-    $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf
+    $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
+    $(LOCAL_PATH)/audio/libdirac.so:system/lib/soundfx/libdirac.so
 
 # Display
 PRODUCT_PACKAGES += \
@@ -186,6 +187,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.pcm.enable=enable \
     av.offload.enable=enable \
     av.streaming.offload.enable=enable
+
+# DiracHD audio effects
+PRODUCT_PROPERTY_OVERRIDES += \
+    dsp.dirac.enable=true
 
 # Enable AAC 5.1 output
 PRODUCT_PROPERTY_OVERRIDES += \
